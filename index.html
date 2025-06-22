@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Home | Devil-Raged Education</title>
+<link rel="stylesheet" href="styles/style.css">
+<style>
+html, body {
+margin: 0;
+padding: 0;
+background: #0d0d0d;
+color: white;
+font-family: 'Segoe UI', sans-serif;
+overflow-x: hidden;
+}
+
+header {
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+background: radial-gradient(ellipse at center, #1a1a1a 0%, #000 100%);
+position: relative;
+overflow: hidden;
+}
+
+.starfield {
+position: absolute;
+width: 100%;
+height: 100%;
+background: url('https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Viewer/main/assets/stars.png') repeat;
+animation: moveStars 120s linear infinite;
+opacity: 0.2;
+z-index: 0;
+}
+
+@keyframes moveStars {
+from { background-position: 0 0; }
+to { background-position: 10000px 5000px; }
+}
+
+.hero-text {
+text-align: center;
+z-index: 1;
+max-width: 800px;
+}
+
+.hero-text h1 {
+font-size: 3.5rem;
+background: linear-gradient(45deg, #ff0000, #ff8800, #00ffe7, #0077ff);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+animation: glowText 5s ease-in-out infinite alternate;
+}
+
+@keyframes glowText {
+from { text-shadow: 0 0 10px #ff0000; }
+to { text-shadow: 0 0 30px #00fff7; }
+}
+
+.hero-text p {
+font-size: 1.2rem;
+margin-top: 1.5rem;
+color: #e0e0e0;
+line-height: 1.6;
+}
+
+.floating-planet {
+position: absolute;
+width: 80px;
+height: 80px;
+border-radius: 50%;
+background: radial-gradient(circle at 30% 30%, #ff8800, #442200);
+animation: floatPlanet 8s infinite ease-in-out alternate;
+opacity: 0.6;
+}
+
+.floating-planet:nth-child(1) { top: 20%; left: 15%; animation-delay: 0s; }
+.floating-planet:nth-child(2) { top: 60%; left: 75%; animation-delay: 2s; }
+.floating-planet:nth-child(3) { top: 80%; left: 30%; animation-delay: 4s; }
+
+@keyframes floatPlanet {
+0% { transform: translateY(0px) rotate(0deg); }
+100% { transform: translateY(-30px) rotate(360deg); }
+}
+
+main {
+padding: 4rem 2rem;
+max-width: 1000px;
+margin: auto;
+}
+
+main h2 {
+font-size: 2rem;
+color: #ff5252;
+margin-bottom: 1rem;
+text-align: center;
+}
+
+main p {
+color: #ccc;
+font-size: 1.1rem;
+line-height: 1.8;
+margin-bottom: 2rem;
+text-align: center;
+}
+
+footer {
+background: #111;
+color: #aaa;
+text-align: center;
+padding: 1rem;
+}
+</style>
+</head>
+<body>
+    <nav class="devil-nav">
+    <ul>
+    <li><a href="index.html">🏠 Home</a></li>
+    <li><a href="about.html">📖 About</a></li>
+    <li><a href="projects.html">🎮 Projects</a></li>
+    <li><a href="contact.html">📬 Contact</a></li>
+    </ul>
+    </nav>
+<header>
+<div class="starfield"></div>
+<div class="floating-planet"></div>
+<div class="floating-planet"></div>
+<div class="floating-planet"></div>
+
+<div class="hero-text">
+<h1>ANIMATED</h1>
+<p>This is not just a website. This is a full-powered experience built from real code, real visuals, and real ambition. Welcome to the future of learning — animated, interactive, unforgettable.</p>
+</div>
+</header>
+
+<main>
+<h2>🔥 What You’ll Find Here</h2>
+<p>This project was built to break the rules of ordinary learning. Here, you’ll find a solar system that orbits in real time. A 3D object you can spin with your mouse. A site built entirely from code — no templates, no shortcuts.</p>
+
+<p>Each animation on this site helps explain a real-world scientific concept. From orbital motion to geometry, from interactivity to visual design — this is the devil-raged web experience you didn’t know a student could make.</p>
+</main>
+
+<footer>
+&copy; 2025 Harsh Patel | ANIMATED 😈
+</footer>
+</body>
+</html>
